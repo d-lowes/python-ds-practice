@@ -21,3 +21,7 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+    clean_phrase = list(phrase.lower())
+    clean_phrase_nospace = [letter for letter in clean_phrase if letter != ' ']
+
+    return clean_phrase_nospace == clean_phrase_nospace[::-1]
