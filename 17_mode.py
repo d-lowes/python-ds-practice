@@ -11,3 +11,12 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    highest = None
+    highest_count = 0
+    unique = set(nums)
+    for num in unique:
+        count = nums.count(num)
+        if count > highest_count:
+            highest = num
+            highest_count = count
+    return highest
